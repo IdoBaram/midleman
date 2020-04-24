@@ -1,0 +1,9 @@
+- hosts: jenkins-slaves
+  become: true
+  roles:
+    - jenkins_slaves_install
+    
+- hosts: jenkins-master
+  become: true
+  roles:
+    - jenkins_master_install
